@@ -1,0 +1,53 @@
+﻿@model IEnumerable<EdGradAssist.Models.Entities.Gauser>
+
+@{
+	ViewData["Title"] = "Login";
+}
+
+<form>
+	<div class="row">
+		<div class="column">
+			<label for="UserEmail">Email</label>
+		</div>
+		<div class="column">
+			<input type="text" id="userEmail" name="userEmail" placeholder="Enter email" required>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="column">
+			<label for="UserPassword">Password</label>
+		</div>
+		<div class="column">
+			<input type="password" id="userPassword" name="userPassword" placeholder="Enter password" required>
+		</div>
+	</div>
+	<input type="button" value="Login" onclick="Validate()" />
+</form>
+
+
+<script>
+  function Validate() {
+    $.ajax(
+    {
+      type: "POST",
+      url: '@Url.Action("Validate", "Account")',
+      data: {
+        userEmail: $('#userEmail').val(),
+		  userPassword: $('#userPassword').val()
+			},
+      error: function (result) {
+        alert("There is a Problem, Try Again!");
+      },
+      success: function (result) {
+        console.log(result);
+        if (result.status == true) {
+          window.location.href = '@Url.Action("Index", "Students")';
+        }
+        else {
+          alert(result.message);
+        }
+      }
+    });
+  }
+</script>

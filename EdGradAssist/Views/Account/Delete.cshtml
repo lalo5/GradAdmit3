@@ -1,0 +1,45 @@
+﻿@model EdGradAssist.Models.Entities.Gauser
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Gauser</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Useremail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Useremail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserPassword)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserPassword)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserStatus)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="UserId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,42 @@
+﻿@model EdGradAssist.Models.Entities.Application
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Application</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Concentration)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Concentration.ConcentrationId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EnumNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EnumNavigation.Enum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Job)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Job.JobId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.FolderNum">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
