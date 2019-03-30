@@ -36,7 +36,7 @@ namespace EdGradAssist.Controllers
 		//}
 
         // GET: Applications/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(String id)
         {
             if (id == null)
             {
@@ -47,7 +47,7 @@ namespace EdGradAssist.Controllers
                 .Include(a => a.Concentration)
                 .Include(a => a.EnumNavigation)
                 .Include(a => a.Job)
-                .FirstOrDefaultAsync(m => m.FolderNum == id);
+                .FirstOrDefaultAsync(m => m.Enum == id);
             if (application == null)
             {
                 return NotFound();

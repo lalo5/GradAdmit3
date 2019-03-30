@@ -4,7 +4,24 @@
 	ViewData["Title"] = "Login";
 }
 
-<!-- Button to open the modal login form -->
+<form action="action_page.php">
+	@*<div class="imgcontainer">
+		<img src="img_avatar2.png" alt="Avatar" class="avatar">
+	</div>*@
+
+	<div class="container">
+		<label for="Useremail"><b>Email</b></label>
+		<input type="text" placeholder="Enter Email" name="Useremail" id="Useremail" required>
+
+		<label for="UserPassword"><b>Password</b></label>
+		<input type="password" placeholder="Enter Password" name="UserPassword" id="UserPassword" required>
+
+		<input type="button" value="Login" onclick="Validate()" />
+	</div>
+
+</form>
+
+@*<!-- Button to open the modal login form -->
 <button position="center" onclick="document.getElementById('id01').style.display='block'">Login</button>
 
 <!-- The Modal -->
@@ -27,7 +44,7 @@
 			<input type="button" value="Login" onclick="Validate()" />
 		</div>
 	</form>
-</div>
+</div>*@
 
 
 
@@ -60,8 +77,8 @@
       type: "POST",
       url: '@Url.Action("Validate", "Account")',
       data: {
-        userEmail: $('#userEmail').val(),
-		  userPassword: $('#userPassword').val()
+        useremail: $('#Useremail').val(),
+		  userPassword: $('#UserPassword').val()
 			},
       error: function (result) {
         alert("There is a Problem, Try Again!");

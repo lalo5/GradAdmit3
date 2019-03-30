@@ -91,13 +91,14 @@
 						<td>
 							<a asp-action="Edit" asp-route-id="@item.Enum">Edit</a> |
 							<a asp-action="Details" asp-route-id="@item.Enum">Details</a> |
-							<a asp-action="Application" asp-route-id="@item.Enum">Application</a>
+							<a asp-controller="Applications" asp-action="Details" asp-route-id="@item.Enum">Application</a>
 							<br />
 							<a asp-action="Delete" asp-route-id="@item.Enum">Delete</a>
 						</td>
 					</tr>
 }
-    </tbody>
+
+	</tbody>
 </table>
 
 		</div>
