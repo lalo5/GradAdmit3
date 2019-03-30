@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EdGradAssist.Models.Entities;
-using EdGradAssist.ViewModel;
+
 
 namespace EdGradAssist.Controllers
 {

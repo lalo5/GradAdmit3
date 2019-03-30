@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using EdGradAssist.Models.Entities;
 
-namespace EdGradAssist.ViewModel
+namespace EdGradAssist.Models.Entities
 {
 	public class StudentApplicationViewModel
 	{
