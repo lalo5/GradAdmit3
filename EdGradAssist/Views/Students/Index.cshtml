@@ -19,6 +19,27 @@
 			</p>
 		</form>
 
+		<form asp-controller="Students" asp-action="Index" method="get">
+			<p>
+				Last Name: <input type="text" name="SearchString">
+				<input type="submit" value="Filter" />
+			</p>
+		</form>
+
+		<form asp-controller="Students" asp-action="Index" method="get">
+			<p>
+				E- Number:  <input type="text" name="SearchString">
+				<input type="submit" value="Filter" />
+			</p>
+		</form>
+
+		@*<form asp-controller="Students" asp-action="Index" method="get">
+			<p>
+				Folder Number: <input type="text" name="SearchString">
+				<input type="submit" value="Filter" />
+			</p>
+		</form>*@
+
 	</div>
 	<div class="column right">
 		<div class="table">
@@ -39,6 +60,9 @@
 						</th>
 						<th>
 							@Html.DisplayNameFor(model => model.Email)
+						</th>
+						<th>
+							@Html.DisplayNameFor(model => model.Enum)
 						</th>
 						<th></th>
 					</tr>
@@ -62,15 +86,19 @@
 							@Html.DisplayFor(modelItem => item.Email)
 						</td>
 						<td>
-							@*<a asp-action="Edit" asp-route-id="@item.Enum">Edit</a> |
-							<a asp-action="Details" asp-route-id="@item.Enum">Details</a> |*@
-							<a asp-action="Application" asp-route-id="@item.Enum">Application</a>
+							@Html.DisplayFor(modelItem => item.Enum)
+						</td>
+						<td>
+							<a asp-action="Edit" asp-route-id="@item.Enum">Edit</a> |
+							<a asp-action="Details" asp-route-id="@item.Enum">Details</a> |
+							<a asp-controller="Applications" asp-action="Details" asp-route-id="@item.Enum">Application</a>
 							<br />
-							@*<a asp-action="Delete" asp-route-id="@item.Enum">Delete</a>*@
+							<a asp-action="Delete" asp-route-id="@item.Enum">Delete</a>
 						</td>
 					</tr>
 }
-    </tbody>
+
+	</tbody>
 </table>
 
 		</div>

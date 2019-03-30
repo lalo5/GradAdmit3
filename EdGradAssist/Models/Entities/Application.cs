@@ -20,6 +20,7 @@ namespace EdGradAssist.Models.Entities
 
         public Concentration Concentration { get; set; }
         public Student EnumNavigation { get; set; }
+		//public Student Enum { get; set; }
         public Job Job { get; set; }
         public ICollection<Address> Address { get; set; }
         public ICollection<Review> Review { get; set; }

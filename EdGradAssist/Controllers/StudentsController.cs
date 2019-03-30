@@ -32,9 +32,8 @@ namespace EdGradAssist.Controllers
 
 			if (!String.IsNullOrEmpty(searchString))
 			{
-				student = student.Where(s => s.Fname.Contains(searchString));
+				student = student.Where(s => s.Fname.Contains(searchString) || s.Enum.Contains(searchString) || s.Lname.Contains(searchString));
 			}
-
 			return View(await student.ToListAsync());
 		}
 
