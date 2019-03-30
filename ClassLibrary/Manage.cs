@@ -101,6 +101,13 @@ namespace Shared
             return iStatus;
         }//end CreateCourse(AbstractCourse)
 
+        public int GenerateWeight(AppReview ReviewIn)
+        {
+            int iWeight = -1;
+
+            return iWeight;
+        }//end GenerateWeight()
+
         /// <summary>
         /// Search the database based on the passed name
         /// </summary>

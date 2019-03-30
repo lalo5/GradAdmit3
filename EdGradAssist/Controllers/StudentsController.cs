@@ -13,7 +13,6 @@ namespace EdGradAssist.Controllers
     public class StudentsController : Controller
     {
         private readonly masterContext _context;
-
         public StudentsController(masterContext context)
         {
             _context = context;
