@@ -4,41 +4,42 @@
     ViewData["Title"] = "Index";
 }
 
-<h2></h2>
-
 <div>
-	<div class="container">
+    <div class="container">
+        <p align="right">
+            <a asp-action="Applications/Create" class="btn">Create New</a>
+        </p>
 
-		@*First Name: @Html.TextBox("SearchEnum")<br /><br />
-		<input type="submit" value="Search" />*@
+        @*First Name: @Html.TextBox("SearchEnum")<br /><br />
+        <input type="submit" value="Search" />*@
 
-		<form asp-controller="Students" asp-action="Index" method="get" class="row">
-			<p>
-				First Name: <input type="text" name="SearchString">
-				<input type="submit" value="Filter" />
-			</p>
-		</form>
+        <form asp-controller="Students" asp-action="Index" method="get" class="row">
+            <p>
+                First Name: <input type="text" name="SearchString">
+                <input type="submit" value="Filter" />
+            </p>
+        </form>
 
-		<form asp-controller="Students" asp-action="Index" method="get" class="row">
-			<p>
-				Last Name: <input type="text" name="SearchString">
-				<input type="submit" value="Filter" />
-			</p>
-		</form>
+        <form asp-controller="Students" asp-action="Index" method="get" class="row">
+            <p>
+                Last Name: <input type="text" name="SearchString">
+                <input type="submit" value="Filter" />
+            </p>
+        </form>
 
-		<form asp-controller="Students" asp-action="Index" method="get" class="row">
-			<p>
-				E- Number:  <input type="text" name="SearchString">
-				<input type="submit" value="Filter" />
-			</p>
-		</form>
+        <form asp-controller="Students" asp-action="Index" method="get" class="row">
+            <p>
+                E- Number:  <input type="text" name="SearchString">
+                <input type="submit" value="Filter" />
+            </p>
+        </form>
 
-		@*<form asp-controller="Students" asp-action="Index" method="get">
-			<p>
-				Folder Number: <input type="text" name="SearchString">
-				<input type="submit" value="Filter" />
-			</p>
-		</form>*@
+        @*<form asp-controller="Students" asp-action="Index" method="get">
+            <p>
+                Folder Number: <input type="text" name="SearchString">
+                <input type="submit" value="Filter" />
+            </p>
+        </form>*@
 
 
         <h2>Active Applications</h2>
@@ -106,6 +107,4 @@
 </div>
 
 
-@*<p>
-    <a asp-action="Create">Create New</a>
-</p>*@
+

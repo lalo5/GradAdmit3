@@ -232,3 +232,7 @@ input {
     padding-top: 5%;
     padding-bottom: 5%;
 }
+.panel-title {
+    color: #041E42;
+    font-weight: 600;
+}
