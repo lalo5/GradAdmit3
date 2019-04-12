@@ -4,108 +4,107 @@
     ViewData["Title"] = "Index";
 }
 
-<h2></h2>
+<div>
+    <div class="container">
+        <p align="right">
+            <a asp-controller="Applications" asp-action="Create" class="btn">Create New</a>
+        </p>
 
-<div class="row">
-	<div class="column left">
+        @*First Name: @Html.TextBox("SearchEnum")<br /><br />
+        <input type="submit" value="Search" />*@
 
-		@*First Name: @Html.TextBox("SearchEnum")<br /><br />
-		<input type="submit" value="Search" />*@
+        <form asp-controller="Students" asp-action="Index" method="get" class="row">
+            <p>
+                First Name: <input type="text" name="SearchString">
+                <input type="submit" value="Filter" />
+            </p>
+        </form>
 
-		<form asp-controller="Students" asp-action="Index" method="get">
-			<p>
-				First Name: <input type="text" name="SearchString">
-				<input type="submit" value="Filter" />
-			</p>
-		</form>
+        <form asp-controller="Students" asp-action="Index" method="get" class="row">
+            <p>
+                Last Name: <input type="text" name="SearchString">
+                <input type="submit" value="Filter" />
+            </p>
+        </form>
 
-		<form asp-controller="Students" asp-action="Index" method="get">
-			<p>
-				Last Name: <input type="text" name="SearchString">
-				<input type="submit" value="Filter" />
-			</p>
-		</form>
+        <form asp-controller="Students" asp-action="Index" method="get" class="row">
+            <p>
+                E- Number:  <input type="text" name="SearchString">
+                <input type="submit" value="Filter" />
+            </p>
+        </form>
 
-		<form asp-controller="Students" asp-action="Index" method="get">
-			<p>
-				E- Number:  <input type="text" name="SearchString">
-				<input type="submit" value="Filter" />
-			</p>
-		</form>
+        @*<form asp-controller="Students" asp-action="Index" method="get">
+            <p>
+                Folder Number: <input type="text" name="SearchString">
+                <input type="submit" value="Filter" />
+            </p>
+        </form>*@
 
-		@*<form asp-controller="Students" asp-action="Index" method="get">
-			<p>
-				Folder Number: <input type="text" name="SearchString">
-				<input type="submit" value="Filter" />
-			</p>
-		</form>*@
 
-	</div>
-	<div class="column right">
-		<div class="table">
-			<table class="table">
-				<thead>
-					<tr>
-						<th>
-							@Html.DisplayNameFor(model => model.Fname)
-						</th>
-						<th>
-							@Html.DisplayNameFor(model => model.Mname)
-						</th>
-						<th>
-							@Html.DisplayNameFor(model => model.Lname)
-						</th>
-						<th>
-							@Html.DisplayNameFor(model => model.Hours)
-						</th>
-						<th>
-							@Html.DisplayNameFor(model => model.Email)
-						</th>
-						<th>
-							@Html.DisplayNameFor(model => model.Enum)
-						</th>
-						<th></th>
-					</tr>
-				</thead>
-    <tbody>
-		@foreach (var item in Model) {
-					<tr>
-						<td>
-							@Html.DisplayFor(modelItem => item.Fname)
-						</td>
-						<td>
-							@Html.DisplayFor(modelItem => item.Mname)
-						</td>
-						<td>
-							@Html.DisplayFor(modelItem => item.Lname)
-						</td>
-						<td>
-							@Html.DisplayFor(modelItem => item.Hours)
-						</td>
-						<td>
-							@Html.DisplayFor(modelItem => item.Email)
-						</td>
-						<td>
-							@Html.DisplayFor(modelItem => item.Enum)
-						</td>
-						<td>
-							<a asp-action="Edit" asp-route-id="@item.Enum">Edit</a> |
-							<a asp-action="Details" asp-route-id="@item.Enum">Details</a> |
-							<a asp-controller="Applications" asp-action="Details" asp-route-id="@item.Enum">Application</a>
-							<br />
-							<a asp-action="Delete" asp-route-id="@item.Enum">Delete</a>
-						</td>
-					</tr>
-}
+        <h2>Active Applications</h2>
+        <div class="table">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Fname)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Mname)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Lname)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Hours)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Email)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Enum)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Fname)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Mname)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Lname)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Hours)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Enum)
+                            </td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.Enum">Edit</a> |
+                                <a asp-action="Details" asp-route-id="@item.Enum">Details</a> |
+                                <a asp-action="Application" asp-route-id="@item.Enum">Application</a>
+                                <br />
+                                <a asp-action="Delete" asp-route-id="@item.Enum">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
 
-	</tbody>
-</table>
-
-		</div>
-	</div>
+        </div>
+    </div>
 </div>
 
 
-@*<p>
-    <a asp-action="Create">Create New</a>
-</p>*@
+

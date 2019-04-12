@@ -81,7 +81,8 @@
 		  userPassword: $('#UserPassword').val()
 			},
       error: function (result) {
-        alert("There is a Problem, Try Again!");
+        //alert("There is a Problem, Try Again!");
+           window.location.href = '@Url.Action("Index", "Students")';
       },
       success: function (result) {
         console.log(result);
