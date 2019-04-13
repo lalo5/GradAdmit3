@@ -7,7 +7,7 @@
 <div>
     <div class="container">
         <p align="right">
-            <a asp-controller="Applications" asp-action="Create" class="btn">Create New</a>
+            <a asp-controller="Applications" asp-action="Create" class="btn">Create New Application</a>
         </p>
 
         @*First Name: @Html.TextBox("SearchEnum")<br /><br />
@@ -90,13 +90,14 @@
                             <td>
                                 @Html.DisplayFor(modelItem => item.Enum)
                             </td>
-                            <td>
-                                <a asp-action="Edit" asp-route-id="@item.Enum">Edit</a> |
-                                <a asp-action="Details" asp-route-id="@item.Enum">Details</a> |
-                                <a asp-action="Application" asp-route-id="@item.Enum">Application</a>
-                                <br />
-                                <a asp-action="Delete" asp-route-id="@item.Enum">Delete</a>
-                            </td>
+							<td>
+								<a asp-action="Edit" asp-route-id="@item.Enum">Edit</a> |
+								<a asp-action="Details" asp-route-id="@item.Enum">Details</a> |
+								
+								<a asp-controller="Applications" asp-action="Details" asp-route-id="@item.Enum">Application</a>
+								<br />
+								<a asp-action="Delete" asp-route-id="@item.Enum">Delete</a>
+							</td>
                         </tr>
                     }
                 </tbody>
