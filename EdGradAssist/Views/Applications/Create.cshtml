@@ -1,20 +1,14 @@
-﻿@model EdGradAssist.ViewModel.StudentApplicationViewModel
+﻿@model EdGradAssist.Models.Entities.StudentApplicationViewModel
 
 @{
     ViewData["Title"] = "Create";
 }
 
-
-
-<h2>Create</h2>
-
-    <h4>Application</h4>
-    <hr />
-    <div class="row">
-        <div class="col-md-4">
-            <form asp-action="Create">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-group">
+<form asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="container">
+        <h2>New Application</h2>
+        <!-- 			<div class="form-group">
                     <label asp-for="FolderNum" class="control-label"></label>
                     <input asp-for="FolderNum" class="form-control" />
                     <span asp-validation-for="FolderNum" class="text-danger"></span>
@@ -23,30 +17,323 @@
                     <label asp-for="ApplicationDate" class="control-label"></label>
                     <input asp-for="ApplicationDate" class="form-control" />
                     <span asp-validation-for="ApplicationDate" class="text-danger"></span>
-                </div>
+                </div> -->
+        <div class="panel-heading">
+            <div class="row">
                 <div class="form-group">
-                    <label asp-for="Enum" class="control-label"></label>
-                    <select asp-for="Enum" class ="form-control" asp-items="ViewBag.Enum"></select>
+                    <div class="col-25">
+                        <label asp-for="Concentration" class="control-label">Concentration</label>
+                    </div>
+                    <div class="col-75">
+                        <fieldset>
+                            <select id="Concentration" name="Concentration">
+                                <option value="1"><%=ConcentationID%></option>
+                                <option value="2"><%=ConcentrationID%></option>
+                            </select>
+                        </fieldset>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label asp-for="ConcentrationId" class="control-label"></label>
-                    <select asp-for="ConcentrationId" class ="form-control" asp-items="ViewBag.ConcentrationId"></select>
+            </div>
+        </div>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapsestudent">Student Information</a>
+                    </h4>
                 </div>
-                <div class="form-group">
-                    <label asp-for="JobId" class="control-label"></label>
-                    <select asp-for="JobId" class ="form-control" asp-items="ViewBag.JobId"></select>
+                <div id="collapsestudent" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-25">
+                                    <label asp-for="Fname" class="control-label">First Name: </label>
+                                </div>
+                                <div class="col-75">
+                                    <input asp-for="Fname" class="form-control" />
+                                    <span asp-validation-for="Fname" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-25">
+                                    <label asp-for="Mname" class="control-label">Middle Name: </label>
+                                </div>
+                                <div class="col-75">
+                                    <input asp-for="Mname" class="form-control" />
+                                    <span asp-validation-for="Mname" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-25">
+                                    <label asp-for="Lname" class="control-label">Last Name: </label>
+                                </div>
+                                <div class="col-75">
+                                    <input asp-for="Lname" class="form-control" />
+                                    <span asp-validation-for="Lname" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-25">
+                                    <label asp-for="Hours" class="control-label">Hours: </label>
+                                </div>
+                                <div class="col-75">
+                                    <input asp-for="Hours" class="form-control" />
+                                    <span asp-validation-for="Hours" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-25">
+                                    <label asp-for="Email" class="control-label">email: </label>
+                                </div>
+                                <div class="col-75">
+                                    <input asp-for="Email" class="form-control" />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseaddress">Address</a>
+                    </h4>
                 </div>
-            </form>
+                <div id="collapseaddress" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-25">
+                                    <label asp-for="Street1" class="control-label">Street Address 1: </label>
+                                </div>
+                                <div class="col-75">
+                                    <input asp-for="Street1" class="form-control" />
+                                    <span asp-validation-for="Street1" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-25">
+                                    <label asp-for="Street2" class="control-label">Street Address 2: </label>
+                                </div>
+                                <div class="col-75">
+                                    <input asp-for="Street2" class="form-control" />
+                                    <span asp-validation-for="Street2" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-25">
+                                    <label asp-for="City" class="control-label">City: </label>
+                                </div>
+                                <div class="col-75">
+                                    <input asp-for="City" class="form-control" />
+                                    <span asp-validation-for="City" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-25">
+                                    <label asp-for="State" class="control-label">State: </label>
+                                </div>
+                                <div class="col-75">
+                                    <input asp-for="State" class="form-control" />
+                                    <span asp-validation-for="State" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-25">
+                                    <label asp-for="Zip" class="control-label">Zip: </label>
+                                </div>
+                                <div class="col-75">
+                                    <input asp-for="Zip" class="form-control" />
+                                    <span asp-validation-for="Zip" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-25">
+                                    <label asp-for="Country" class="control-label">Country: </label>
+                                </div>
+                                <div class="col-75">
+                                    <input asp-for="Country" class="form-control" />
+                                    <span asp-validation-for="Country" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseeducation">Education</a>
+                    </h4>
+                </div>
+                <div id="collapseeducation" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-25">
+                                    <label asp-for="Institution" class="control-label">Institution: </label>
+                                </div>
+                                <div class="col-75">
+                                    <input asp-for="Institution" class="form-control" />
+                                    <span asp-validation-for="Institution" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-25">
+                                    <label asp-for="Major" class="control-label">Major: </label>
+                                </div>
+                                <div class="col-75">
+                                    <input asp-for="Major" class="form-control" />
+                                    <span asp-validation-for="Major" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-25">
+                                    <label asp-for="Degree1" class="control-label">Degree: </label>
+                                </div>
+                                <div class="col-75">
+                                    <input asp-for="Degree1" class="form-control" />
+                                    <span asp-validation-for="Degree1" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-25">
+                                    <label asp-for="Gpa" class="control-label">GPA: </label>
+                                </div>
+                                <div class="col-75">
+                                    <input asp-for="Gpa" class="form-control" />
+                                    <span asp-validation-for="Gpa" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-25">
+                                    <label asp-for="GraduationDate" class="control-label">Graduation Date: </label>
+                                </div>
+                                <div class="col-75">
+                                    <input asp-for="GraduationDate" class="form-control" />
+                                    <span asp-validation-for="GraduationDate" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapsescore">Test Scores</a>
+                    </h4>
+                </div>
+                <div id="collapsescore" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-25">
+                                    <label asp-for="ScoreTypeDesc" class="control-label"><%ScoreTypeDesc%> </label>
+                                </div>
+                                <div class="col-75">
+                                    <input asp-for="ScoreTypeDesc" class="form-control" />
+                                    <span asp-validation-for="ScoreTypeDesc" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapsereview">Reviews</a>
+                    </h4>
+                </div>
+                <div id="collapsereview" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-25">
+                                    <a asp-action="Review" class="btn btn-default">Add Review</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-default" />
         </div>
     </div>
+</form>
 
-    <div>
-        <a asp-action="Index">Back to List</a>
+
+@*<h2>Create</h2>
+
+<h4>Application</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FolderNum" class="control-label"></label>
+                <input asp-for="FolderNum" class="form-control" />
+                <span asp-validation-for="FolderNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApplicationDate" class="control-label"></label>
+                <input asp-for="ApplicationDate" class="form-control" />
+                <span asp-validation-for="ApplicationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enum" class="control-label"></label>
+                <select asp-for="Enum" class="form-control" asp-items="ViewBag.Enum"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConcentrationId" class="control-label"></label>
+                <select asp-for="ConcentrationId" class="form-control" asp-items="ViewBag.ConcentrationId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobId" class="control-label"></label>
+                <select asp-for="JobId" class="form-control" asp-items="ViewBag.JobId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
     </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+}*@

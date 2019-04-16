@@ -88,11 +88,7 @@ td, th {
 	padding: 8px;
 }
 
-input {
-	position: bottom;
-	right: 0;
-	bottom: 0;
-}
+
 
 /* Style buttons */
 .btn {
@@ -104,11 +100,11 @@ input {
     font-size: 20px;
 }
 
-	/* Darker background on mouse-over */
-    .btn:hover {
-        background-color: #041E80;
-        color: white;
-    }
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: #041E80;
+    color: white;
+}
 
 .button {
     background-color: #041E42; 
@@ -131,15 +127,22 @@ form {
 
 /* Full-width inputs */
 input[type=text], input[type=password] {
-	width: 100%;
-	padding: 12px 20px;
-	margin: 8px 0;
-	display: inline-block;
-	border: 1px solid #ccc;
-	box-sizing: border-box;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
 
-/* Set a style for all buttons */
+input {
+    position: bottom;
+    right: 0;
+    bottom: 0;
+}
+
+/* Set a style for all buttons 
 button {
 	background-color: #4CAF50;
 	color: white;
@@ -148,12 +151,12 @@ button {
 	border: none;
 	cursor: pointer;
 	width: 100%;
-}
+}*/
 
-	/* Add a hover effect for buttons */
-	button:hover {
-		opacity: 0.8;
-	}
+/* Add a hover effect for buttons */
+button:hover {
+	opacity: 0.8;
+}
 
 /* Extra style for the cancel button (red) */
 .cancelbtn {
