@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using EdGradAssist.Models.Entities;
+using Shared;
 
 namespace EdGradAssist.Models.Entities
 {
@@ -153,5 +154,6 @@ namespace EdGradAssist.Models.Entities
 		//public ICollection<Application> Application { get; set; }
 		public ICollection<Course> Course { get; set; }
 		public ICollection<Criteria> Criteria { get; set; }
+
 	}
 }
