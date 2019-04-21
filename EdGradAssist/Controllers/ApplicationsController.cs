@@ -43,17 +43,23 @@ namespace EdGradAssist.Controllers
                 return NotFound();
             }
 
-            var application = await _context.Application
-                .Include(a => a.Concentration)
-                .Include(a => a.EnumNavigation)
-                .Include(a => a.Job)
-                .FirstOrDefaultAsync(m => m.Enum == id);
-            if (application == null)
-            {
-                return NotFound();
-            }
+			//var application = await _context.Application
+			//    .Include(a => a.Concentration)
+			//    .Include(a => a.EnumNavigation)
+			//    .Include(a => a.Job)
+			//    .FirstOrDefaultAsync(m => m.Enum == id);
+			//if (application == null)
+			//{
+			//    return NotFound();
+			//}
 
-            return View(application);
+			ViewData["ConcentrationId"] = new SelectList(_context.Concentration, "ConcentrationId", "ConcentrationId");
+			ViewData["Enum"] = new SelectList(_context.Student, "Enum", "Enum");
+			ViewData["JobId"] = new SelectList(_context.Job, "JobId", "JobId");
+
+
+			//return View(application);
+			return View();
         }
 
         // GET: Applications/Create
@@ -179,6 +185,31 @@ namespace EdGradAssist.Controllers
             return _context.Application.Any(e => e.FolderNum == id);
         }
 
+		// GET: Applications/Review/5
+		public async Task<IActionResult> Review(String id)
+		{
+			if (id == null)
+			{
+				return NotFound();
+			}
 
-    }
+			//var application = await _context.Application
+			//    .Include(a => a.Concentration)
+			//    .Include(a => a.EnumNavigation)
+			//    .Include(a => a.Job)
+			//    .FirstOrDefaultAsync(m => m.Enum == id);
+			//if (application == null)
+			//{
+			//    return NotFound();
+			//}
+
+			ViewData["ConcentrationId"] = new SelectList(_context.Concentration, "ConcentrationId", "ConcentrationId");
+			ViewData["Enum"] = new SelectList(_context.Student, "Enum", "Enum");
+			ViewData["JobId"] = new SelectList(_context.Job, "JobId", "JobId");
+
+
+			//return View(application);
+			return View();
+		}
+	}
 }
