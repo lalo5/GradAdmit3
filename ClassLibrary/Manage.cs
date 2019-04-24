@@ -35,6 +35,13 @@ namespace Shared
             return Number;
         }
 
+        public Manage(List<GradApplication> GradAppsIn, List<User> UsersIn, User UserIn)
+        {
+            Applications = new List<GradApplication>(GradAppsIn);
+            AllUsers = new List<User>(UsersIn);
+            currentUser = new User(UserIn);
+        }
+
         /// <summary>
         /// Method for filling the queues with applications to review from the buffer queue
         /// </summary>

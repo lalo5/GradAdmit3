@@ -20,6 +20,12 @@ namespace Shared
             cutoff = 1;
         }//end ToDoQueue()
 
+        public ToDoQueue(int cutoffIn)
+        {
+            this.ToDo = new Queue<GradApplication>();
+            this.cutoff = cutoffIn;
+        }
+
         public ToDoQueue(Queue<GradApplication> QueueIn, int cutoffIn)
         {
             this.ToDo = new Queue<GradApplication>(QueueIn);

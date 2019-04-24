@@ -44,12 +44,13 @@ namespace Shared
         /// <param name="emailIn"></param>
         /// <param name="passwordIn"></param>
         /// <param name="TypeIn"></param>
-        public User(int idIn, string emailIn, string passwordIn, UserType TypeIn)
+        public User(int idIn, string emailIn, string passwordIn, UserType TypeIn, int cutoffIn)
         {
             this.id = idIn;
             this.email = emailIn;
             this.password = passwordIn;
             this.type = TypeIn;
+            this.AppsToReview = new ToDoQueue();
         }//end User(int, string, string, UserType)
 
         public User(string emailIn, string passwordIn)

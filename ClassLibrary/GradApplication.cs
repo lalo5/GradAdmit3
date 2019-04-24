@@ -11,11 +11,12 @@ namespace Shared
     /// </summary>
     public class GradApplication : IComparable<GradApplication>
     {
-        double ComplexityRating;
-        Concentration ConcentrationApplied;
-        DateTime Date;
-        String Enum;
-        Student Applicant;
+        private double ComplexityRating;
+        private Concentration ConcentrationApplied;
+        private DateTime Date;
+        private String Enum;
+        private Student Applicant;
+        private AbstractReview Review;
 
         public GradApplication()
         {
