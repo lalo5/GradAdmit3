@@ -13,7 +13,7 @@ namespace Shared
     {
         protected Student Subject;
         protected DateTime ReviewDate;
-        
+        protected Criteria ReviewCriteria;
         public AbstractReview(Student SubjectIn, DateTime DateIn)
         {
             Subject = SubjectIn; //Replace with a call to the copy constructor later

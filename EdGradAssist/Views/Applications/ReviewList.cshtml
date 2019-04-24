@@ -1,0 +1,347 @@
+﻿@model IEnumerable<EdGradAssist.Models.Entities.StudentApplicationViewModel>
+
+@{
+    ViewData["Title"] = "ReviewList";
+}
+
+<h2>ReviewList</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AddressId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Street1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Street2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FolderNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BudgetId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EtsucourseId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConcentrationId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Useremail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserPassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BudgetAllocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Professor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Building)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReviewId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReviewDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ScoreTypeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ScoreTypeDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Enum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hours)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApplicationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DegreeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Institution)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Major)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Degree1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gpa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GraduationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Graduated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseTerm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseGrade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CriteriaId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CriteriaDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CriteriaStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CriteriaDisplayOrder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ScoreId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Score1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConcentrationDescription)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddressId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Street1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Street2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FolderNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BudgetId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EtsucourseId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConcentrationId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Useremail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserPassword)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BudgetAllocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Professor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Building)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReviewId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReviewDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ScoreTypeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ScoreTypeDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Enum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hours)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApplicationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DegreeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Institution)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Major)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Degree1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gpa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GraduationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Graduated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseTerm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseGrade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CriteriaId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CriteriaDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CriteriaStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CriteriaDisplayOrder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ScoreId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Score1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConcentrationDescription)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

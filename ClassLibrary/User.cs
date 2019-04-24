@@ -10,13 +10,14 @@ namespace Shared
     /// <summary>
     /// A member of the grad evaluation process, one of three types, see UserType
     /// </summary>
-    public class User
+    public class User : IComparable<User>
     {
         public int id { get; }
         public string email { get; set; }
         public string password{ get; set; }
         public UserType type { get; set; }
         public UserStatus status { get; set; }
+        public ToDoQueue AppsToReview;
 
         /// <summary>
         /// Default constructor
@@ -27,18 +28,29 @@ namespace Shared
         }//end User()
 
         /// <summary>
+        /// Sort based on the total complexity 
+        /// </summary>
+        /// <param name="UserIn"></param>
+        /// <returns></returns>
+        public int CompareTo(User UserIn)
+        {
+            return this.AppsToReview.GetTotal().CompareTo(UserIn.AppsToReview.GetTotal());
+        }//end CompareTo(User)
+
+        /// <summary>
         /// Parameterized constructor
         /// </summary>
         /// <param name="idIn"></param>
         /// <param name="emailIn"></param>
         /// <param name="passwordIn"></param>
         /// <param name="TypeIn"></param>
-        public User(int idIn, string emailIn, string passwordIn, UserType TypeIn)
+        public User(int idIn, string emailIn, string passwordIn, UserType TypeIn, int cutoffIn)
         {
             this.id = idIn;
             this.email = emailIn;
             this.password = passwordIn;
             this.type = TypeIn;
+            this.AppsToReview = new ToDoQueue();
         }//end User(int, string, string, UserType)
 
         public User(string emailIn, string passwordIn)

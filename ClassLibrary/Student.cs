@@ -18,11 +18,11 @@ namespace Shared
 		private string L_Name { get; }
 		private int Hours { get; }
 		private string Email { get; }
-		private int Address_ID { get; }
+        private Address StudentAddress;
         private Concentration StudentConcentration;
 
 		//instance constructor 
-		public Student(string e_Num, string f_Name, string m_Name, string l_Name, int hours, string email, int address_ID, Concentration ConcentrationIn)
+		public Student(string e_Num, string f_Name, string m_Name, string l_Name, int hours, string email, Address AddrIn, Concentration ConcentrationIn)
 		{
 			E_Num = e_Num;
 			F_Name = f_Name;
@@ -30,9 +30,21 @@ namespace Shared
 			L_Name = l_Name;
 			Hours = hours;
 			Email = email;
-			Address_ID = address_ID;
-            this.StudentConcentration = ConcentrationIn;
+			this.StudentAddress = new Address(AddrIn);
+            this.StudentConcentration = new Concentration(ConcentrationIn);
 		}
+
+        public Student()
+        {
+            E_Num = "Not Entered";
+            F_Name = "No Name";
+            M_Name = "Not Entered";
+            L_Name = "Not Entered";
+            Hours = 0;
+            Email = "Not Entered";
+            this.StudentAddress = new Address();
+            this.StudentConcentration = new Concentration();
+        }//end Student()
 
 		//copy constructor 
 		public Student(Student stud)
@@ -43,9 +55,19 @@ namespace Shared
 			L_Name = stud.L_Name;
 			Hours = stud.Hours;
 			Email = stud.Email;
-			Address_ID = stud.Address_ID;
+			this.StudentAddress = new Address( stud.StudentAddress);
             this.StudentConcentration = new Concentration(stud.StudentConcentration);
 		}//end Student(Student)
+
+        public Address GetAddress()
+        {
+            return this.StudentAddress;
+        }//end GetAddress()
+
+        public Concentration GetConcentration()
+        {
+            return this.StudentConcentration;
+        }//end Concentration()
 
 	}//end student
 }

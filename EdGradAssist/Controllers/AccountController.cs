@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EdGradAssist.Models.Entities;
+using Shared;
 
 namespace EdGradAssist.Controllers
 {
@@ -20,7 +21,10 @@ namespace EdGradAssist.Controllers
 
 		public IActionResult Login()
 		{
-			return View();
+            int i = 0;
+            Manage m = new Manage();
+            i = m.GetNumber();
+            return View();
 		}
 
 		public ActionResult Validate(Gauser gauser)

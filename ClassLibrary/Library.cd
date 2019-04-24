@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Shared.AbstractCourse">
+    <Position X="5.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAYCAAAAAAAAAAQAgAAABAQEAAAAAIAACAAAAAIABAA=</HashCode>
+      <FileName>AbstractCourse.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Shared.AbstractCriteria">
+    <Position X="11" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAQAAEAAAgBAAAIAAABAgEAAAAAAAACQAAAAAAAAA=</HashCode>
+      <FileName>AbstractCriteria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.AbstractReview">
+    <Position X="8.25" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAoAAAAAAAAAgAAIAABAAAAAAAAAAACAAAgAAAAAA=</HashCode>
+      <FileName>AbstractReview.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.Address">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAwIAAAIAAAAAAAAAAoAAAAAAAIADAAAAAA=</HashCode>
+      <FileName>Address.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.AppReview">
+    <Position X="8.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>AppReview.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.AppReviews">
+    <Position X="5.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAABAAABAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>AppReviews.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.Concentration">
+    <Position X="11.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAgAEAAAAAAAAAQAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Concentration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.Course">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Course.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.Courses">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAEAAAAAAAAAAAAAAABAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Courses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.Criteria">
+    <Position X="13.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABAAAAAAAAAAACAAEAAAAAAA=</HashCode>
+      <FileName>Criteria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.Criterion">
+    <Position X="13.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Criterion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.Degree">
+    <Position X="14" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Degree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.GradApplication">
+    <Position X="5.5" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAIAAQEAAAQRAIAAAAIAAIAAAAABAACAAAAAAAE=</HashCode>
+      <FileName>GradApplication.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Shared.Manage">
+    <Position X="1" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>CAChQIgAARBAAACMAEAABASAAAAAABAAAEAIAAQAAAA=</HashCode>
+      <FileName>Manage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.Student">
+    <Position X="8.25" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABAARIAACAwAAAAAAAAAAAIAAAAAAACAAAgAAAAAAA=</HashCode>
+      <FileName>Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.ToDoQueue">
+    <Position X="3.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABABAAAEQAEAAAAAAQAAACAAAIABIAAAAAAAAAACAA=</HashCode>
+      <FileName>ToDoQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shared.User">
+    <Position X="1.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAYkAAAAAAAAAAABAAAAAAAAAgAAAgA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Enum Name="Shared.UserStatus">
+    <Position X="3.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAg=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Shared.UserType">
+    <Position X="1.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAIAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>UserType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
