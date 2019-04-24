@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EdGradAssist.Controllers.AccountController">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACBBACAAAAAAAABAAEAAEACAAEQAAAAAAA=</HashCode>
+      <FileName>Controllers\AccountController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Controllers.ApplicationsController">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAABBACAAAAAAAAAAAEAAEACAAGAAAAAAAA=</HashCode>
+      <FileName>Controllers\ApplicationsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Controllers.CalculatorController">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\CalculatorController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Controllers.HomeController">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAQAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Controllers.StudentApplicationController">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\StudentApplicationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Controllers.StudentsController">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABABBACAAAAAAAAAAAEAAEACAAEABAAAAAA=</HashCode>
+      <FileName>Controllers\StudentsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Models.Entities.Address">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAIAAAAAAAIAAAACAAAAC4AAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Models\Entities\Address.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Models.Entities.Application">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAIAAAAAAgQAAACIAIAAAACAAACAACAEAAAAAA=</HashCode>
+      <FileName>Models\Entities\Application.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Models.Entities.Budget">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABEAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Entities\Budget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Models.Entities.Concentration">
+    <Position X="10" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAEBAAAAAAAIAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Models\Entities\Concentration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Models.Entities.Course">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAgCAAAAAAAAAAAAAAAAEABAAgA=</HashCode>
+      <FileName>Models\Entities\Course.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Models.Entities.Criteria">
+    <Position X="10" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAQAAAAAAAAAAAAAACAAAAAAAAAAAAgAAAkAAAAAA=</HashCode>
+      <FileName>Models\Entities\Criteria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Models.Entities.Degree">
+    <Position X="15.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQQgAAIAAAAAAAAAAAAAAgAEAIAAg=</HashCode>
+      <FileName>Models\Entities\Degree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Models.Entities.Gauser">
+    <Position X="6.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAgAAAAACAAAAACACAIAAAA=</HashCode>
+      <FileName>Models\Entities\Gauser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Models.Entities.GRADAD_DBContext">
+    <Position X="5.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAQBAAAAgQAIACAAAQEAACBAACAACAgAAAggA=</HashCode>
+      <FileName>Models\Entities\GRADAD_DBContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Models.Entities.Job">
+    <Position X="11.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQABAAABAAAAAAAAAIIASAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Entities\Job.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Models.Entities.masterContext">
+    <Position X="13.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAQBAAAAgQAIACAAAQEAACBAACAACAgAAAggA=</HashCode>
+      <FileName>Models\Entities\masterContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Models.Entities.Review">
+    <Position X="4" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAIAAAAAAgAAAAAAAgAACAAAAAAEAAAgAAAAAA=</HashCode>
+      <FileName>Models\Entities\Review.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Models.Entities.ReviewCriteria">
+    <Position X="4" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQEAAAAAAAACAAAAAAAAAAAAAAAAAEACAAAAAgAA=</HashCode>
+      <FileName>Models\Entities\ReviewCriteria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Models.Entities.Score">
+    <Position X="11.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAgQAAAAAAAAACAAgAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Models\Entities\Score.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Models.Entities.ScoreType">
+    <Position X="15.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Models\Entities\ScoreType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Models.Entities.Student">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEADAQCAAQAAAAAAAQAAAAAAAAAAAAAAAAEgA=</HashCode>
+      <FileName>Models\Entities\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Models.Entities.StudentApplicationViewModel">
+    <Position X="8.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABRQdAMNHAwCAgYQogKKA6AAC4CiAACmACgnEJIEgo=</HashCode>
+      <FileName>Models\Entities\StudentApplicationViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Models.Entities.StudentCourse">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAgAAAQAAAAIAAAAAAAAAAACAAAAABAAAA=</HashCode>
+      <FileName>Models\Entities\StudentCourse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EdGradAssist.Models.ErrorViewModel">
+    <Position X="2.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ErrorViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

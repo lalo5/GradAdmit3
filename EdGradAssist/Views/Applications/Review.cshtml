@@ -1,7 +1,156 @@
-﻿
+﻿@model EdGradAssist.Models.Entities.StudentApplicationViewModel
 @{
     ViewData["Title"] = "Review";
 }
 
 <h2>Review</h2>
 
+<body>
+	<form asp-action="Create">
+		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+		<div class="container">
+
+			<h2>Graduate Application Review</h2>
+			<div class="row">
+				<div class="col-75">
+					@Html.DisplayNameFor(model => model.Useremail)
+				</div>
+			</div>
+			<div class="row">
+				@Html.DisplayNameFor(model => model.Enum)
+			</div>
+			<div class="row">
+				@Html.DisplayNameFor(model => model.Fname)
+			</div>
+			<div class="row">
+				@Html.DisplayNameFor(model => model.Mname)
+			</div>
+			<div class="row">
+				@Html.DisplayNameFor(model => model.Lname)
+			</div>
+			<div class="panel-title">
+				<h3>Ability in Computer Science</h3>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					<div class="col-25">
+						<fieldset>
+							<select id="1" name="CSCoursework">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</fieldset>
+					</div>
+					<div class="col-75">
+						<label asp-for="ReviewCriteria" class="control-label">Computer Science Coursework</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group">
+					<div class="col-25">
+						<fieldset>
+							<select id="2" name="CSExperience">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</fieldset>
+					</div>
+					<div class="col-75">
+						<label asp-for="ReviewCriteria" class="control-label">Computer Science Experience</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group">
+					<div class="col-25">
+						<fieldset>
+							<select id="3" name="MathBackground">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</fieldset>
+					</div>
+					<div class="col-75">
+						<label asp-for="ReviewCriteria" class="control-label">Mathmatics Background</label>
+					</div>
+				</div>
+			</div>
+			<h3>Teaching Assistant</h3>
+			<div class="row">
+				<div class="form-group">
+					<div class="col-25">
+						<fieldset>
+							<select id="4" name="GoodCommunication">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</fieldset>
+					</div>
+					<div class="col-75">
+						<label asp-for="ReviewCriteria" class="control-label">Evidence of Good Communication Skills</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group">
+					<div class="col-25">
+						<fieldset>
+							<select id="5" name="Recommendation">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</fieldset>
+					</div>
+					<div class="col-75">
+						<label asp-for="ReviewCriteria" class="control-label">Recommendation</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group">
+					<div class="col-25">
+						<fieldset>
+							<select id="6" name="Essay">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</fieldset>
+					</div>
+					<div class="col-75">
+						<label asp-for="ReviewCriteria" class="control-label">Essay</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<input type="submit" value="Create" class="btn btn-default" />
+			</div>
+			<div>
+				<a asp-action="Index">Back to List</a>
+			</div>
+		</div>
+	</form>
+</body>

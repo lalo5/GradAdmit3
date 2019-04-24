@@ -186,27 +186,26 @@ namespace EdGradAssist.Controllers
         }
 
 		// GET: Applications/Review/5
-		public async Task<IActionResult> Review(String id)
+		public async Task<IActionResult> Review()
 		{
-			if (id == null)
-			{
-				return NotFound();
-			}
-
-			//var application = await _context.Application
-			//    .Include(a => a.Concentration)
-			//    .Include(a => a.EnumNavigation)
-			//    .Include(a => a.Job)
-			//    .FirstOrDefaultAsync(m => m.Enum == id);
-			//if (application == null)
+			//if (id == null)
 			//{
-			//    return NotFound();
+			//	return NotFound();
 			//}
 
-			ViewData["ConcentrationId"] = new SelectList(_context.Concentration, "ConcentrationId", "ConcentrationId");
-			ViewData["Enum"] = new SelectList(_context.Student, "Enum", "Enum");
-			ViewData["JobId"] = new SelectList(_context.Job, "JobId", "JobId");
+			////var application = await _context.Application
+			////    .Include(a => a.Concentration)
+			////    .Include(a => a.EnumNavigation)
+			////    .Include(a => a.Job)
+			////    .FirstOrDefaultAsync(m => m.Enum == id);
+			////if (application == null)
+			////{
+			////    return NotFound();
+			////}
 
+			//ViewData["ConcentrationId"] = new SelectList(_context.Concentration, "ConcentrationId", "ConcentrationId");
+			//ViewData["Enum"] = new SelectList(_context.Student, "Enum", "Enum");
+			//ViewData["JobId"] = new SelectList(_context.Job, "JobId", "JobId");
 
 			//return View(application);
 			return View();
